@@ -43,6 +43,7 @@
 #include "TLibCommon/Debug.h"
 #include <math.h>
 #include <limits>
+#include "TimeCost.h"
 
 //! \ingroup TLibEncoder
 //! \{
@@ -3097,7 +3098,17 @@ TEncSearch::estIntraPredLumaQT(TComDataCU* pcCU,
               case( DMM1_IDX ):
                 {
                   UInt uiTabIdx = 0;
+#if DMM1_TIME_MEASURE
+                  // start
+                  Double dmmTime;
+                  clock_t ltimeBefore = clock();
+#endif
                   xSearchDmm1Wedge( pcCU, uiPartOffset, piOrg, uiStride, puRect.width, puRect.height, uiTabIdx );
+#if DMM1_TIME_MEASURE
+                  // ending time
+                  dmmTime = (Double)(clock()-ltimeBefore) / CLOCKS_PER_SEC;
+                  Dmm1TimeCost::upDmm1TimeCost(dmmTime);
+#endif
                   pcCU->setDmm1WedgeTabIdxSubParts( uiTabIdx,  uiPartOffset, uiDepth + uiInitTrDepth );
                   (getWedgeListScaled( puRect.width )->at( pcCU->getDmm1WedgeTabIdx( uiAbsPartIdx ) )).getPatternScaledCopy( puRect.width, biSegPattern );
                 } break;

@@ -125,6 +125,11 @@
 		78C5943C15872356004401C5 /* libTLibVideoIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6767964B11AD629200421804 /* libTLibVideoIO.a */; };
 		78C5943D1587235B004401C5 /* libTAppCommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C593B415872152004401C5 /* libTAppCommon.a */; };
 		78C5943E1587235E004401C5 /* libTLibExtractor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7885897D15664E3D00982C12 /* libTLibExtractor.a */; };
+		ED99141E66C39D12436245BC /* TimeCost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED991F4D4CE54EBAD9DEFD0C /* TimeCost.cpp */; };
+		ED9914816A0A552A2F6AFB7D /* TimeCost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED991F4D4CE54EBAD9DEFD0C /* TimeCost.cpp */; };
+		ED99148CDE972554E82E9AF5 /* TimeCost.h in Headers */ = {isa = PBXBuildFile; fileRef = ED99128F103677702CAC697D /* TimeCost.h */; };
+		ED991993B811EC73883865C2 /* TimeCost.h in Headers */ = {isa = PBXBuildFile; fileRef = ED99128F103677702CAC697D /* TimeCost.h */; };
+		ED991FC6F77A381169F5E52D /* TimeCost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED991F4D4CE54EBAD9DEFD0C /* TimeCost.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -487,6 +492,8 @@
 		7894E36714890D9A009259F4 /* libTLibRenderer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTLibRenderer.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7894E38A14890DD2009259F4 /* TAppRenderer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TAppRenderer; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C593B415872152004401C5 /* libTAppCommon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTAppCommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED99128F103677702CAC697D /* TimeCost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeCost.h; sourceTree = "<group>"; };
+		ED991F4D4CE54EBAD9DEFD0C /* TimeCost.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TimeCost.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -900,6 +907,8 @@
 				7848705A1B0B62C70098FD5A /* TEncTop.h */,
 				7848705B1B0B62C70098FD5A /* WeightPredAnalysis.cpp */,
 				7848705C1B0B62C70098FD5A /* WeightPredAnalysis.h */,
+				ED991F4D4CE54EBAD9DEFD0C /* TimeCost.cpp */,
+				ED99128F103677702CAC697D /* TimeCost.h */,
 			);
 			path = TLibEncoder;
 			sourceTree = "<group>";
@@ -952,6 +961,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED991993B811EC73883865C2 /* TimeCost.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -966,6 +976,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED99148CDE972554E82E9AF5 /* TimeCost.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1273,6 +1284,7 @@
 				7848708C1B0B63230098FD5A /* TComMotionInfo.cpp in Sources */,
 				784870921B0B63230098FD5A /* TComPrediction.cpp in Sources */,
 				784870901B0B63230098FD5A /* TComPicYuv.cpp in Sources */,
+				ED9914816A0A552A2F6AFB7D /* TimeCost.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1318,6 +1330,7 @@
 				784870AB1B0B634A0098FD5A /* SEIwrite.cpp in Sources */,
 				784870B81B0B634A0098FD5A /* TEncSearch.cpp in Sources */,
 				784870B91B0B634A0098FD5A /* TEncSlice.cpp in Sources */,
+				ED99141E66C39D12436245BC /* TimeCost.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1336,6 +1349,7 @@
 				784870781B0B62D80098FD5A /* TAppEncCfg.cpp in Sources */,
 				784870791B0B62D80098FD5A /* TAppEncTop.cpp in Sources */,
 				784870771B0B62D80098FD5A /* encmain.cpp in Sources */,
+				ED991FC6F77A381169F5E52D /* TimeCost.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

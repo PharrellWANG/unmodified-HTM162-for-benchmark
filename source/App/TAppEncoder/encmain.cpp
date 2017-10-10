@@ -35,9 +35,12 @@
     \brief    Encoder application main
 */
 
+//#include <unistd.h>
+
 #include <time.h>
 #include <iostream>
 #include "TAppEncTop.h"
+#include "TLibEncoder/TimeCost.h"
 #include "TAppCommon/program_options_lite.h"
 
 //! \ingroup TAppEncoder
@@ -104,6 +107,11 @@ int main(int argc, char* argv[])
   // ending time
   dResult = (Double)(clock()-lBefore) / CLOCKS_PER_SEC;
   printf("\n Total Time: %12.3f sec.\n", dResult);
+
+#if DMM1_TIME_MEASURE
+  std::cout<< "\nTotal Time for DMM1:\n";
+  std::cout << Dmm1TimeCost::getDmm1TimeCost() << std::endl;
+#endif
 
   // destroy application encoder class
   cTAppEncTop.destroy();

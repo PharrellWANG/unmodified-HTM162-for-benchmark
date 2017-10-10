@@ -795,6 +795,8 @@ std::vector< std::vector<TComWedgeNode> > g_dmmWedgeNodeLists;
 Void initWedgeLists( Bool initNodeList )
 {
   if( !g_dmmWedgeLists.empty() ) return;
+  // g_aucConvertToBit[ x ]: log2(x/4), if x=4 -> 0, x=8 -> 1, x=16 -> 2, ...
+  // 0, 1, 2
   for( UInt ui = g_aucConvertToBit[DMM_MIN_SIZE]; ui < (g_aucConvertToBit[DMM_MAX_SIZE]); ui++ )
   {
     UInt uiWedgeBlockSize = ((UInt)DMM_MIN_SIZE)<<ui;
